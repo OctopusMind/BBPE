@@ -1,7 +1,7 @@
 from bbpe import BBPETokenizer
 
 # 读取训练文件
-with open("斗破苍穹.txt", "r", encoding="utf-8") as f:
+with open("train_data/斗破苍穹.txt", "r", encoding="utf-8") as f:
     data = f.read()
 # 训练模型
 vocab_size = 5000  # 词表大小
