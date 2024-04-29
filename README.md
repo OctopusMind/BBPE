@@ -28,7 +28,7 @@ BBPE（Bytewise Byte Pair Encoding）是一种字节级别的字节对编码（B
 ### test.py 测试模型
 ```
 from bbpe import BBPETokenizer
-tokenizer = BBPETokenizer("vocab.json", "merges.txt")
+tokenizer = BBPETokenizer("models/斗破苍穹/vocab.json", "models/斗破苍穹/merges.txt")
 encode_text = input("请输入要编码的字符串：")
 print(f"{'#' * 20}编码'{encode_text}'字符串的结果如下{'#' * 20}")
 text_id = tokenizer.encode(encode_text)
@@ -62,5 +62,6 @@ print(f"批量编码的结果如下：{batch_encode_res}")
 批量编码的结果如下：[[202, 214, 409, 202, 365, 235, 286, 480, 182, 474, 278, 498, 115],
                     [206, 490, 123, 409, 295, 194, 476, 209, 365, 235, 234, 474, 214, 0]]
 ```
-## llama3-8b 分词测试
-
+## llama3-8b 分词和qwen分词测试
+把text.py代码中的BBPETokenizer("models/斗破苍穹/vocab.json", "models/斗破苍穹/merges.txt")文件名改成llama3和qwen的模型路径即可。  
+测试结果和llama3和qwen原始模型分词结果一样。
