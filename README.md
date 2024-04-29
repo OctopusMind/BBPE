@@ -30,12 +30,12 @@ BBPE（Bytewise Byte Pair Encoding）是一种字节级别的字节对编码（B
 from bbpe import BBPETokenizer
 tokenizer = BBPETokenizer("models/斗破苍穹/vocab.json", "models/斗破苍穹/merges.txt")
 encode_text = input("请输入要编码的字符串：")
-print(f"{'#' * 20}编码'{encode_text}'字符串的结果如下{'#' * 20}")
+print(f"{'#' * 20}编码'{encode_text}'字符串编码后的结果如下{'#' * 20}")
 text_id = tokenizer.encode(encode_text)
 id_text = tokenizer.decode(tokenizer.encode(encode_text))
 text_token = tokenizer.tokenize(encode_text)
 print(f"'{encode_text}'字符串编码之后对应的id: {text_id}")
-print(f"'{encode_text}'字符串编码之后在反编码对应的字符串: {encode_text}")
+print(f"'{encode_text}'字符串编码之后再反编码对应的字符串: {encode_text}")
 print(f"'{encode_text}'字符串编码之后对应的token: {text_token}")
 print('#' * 60)
 # 批量编码
